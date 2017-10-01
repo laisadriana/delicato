@@ -1,0 +1,101 @@
+<header>
+    <div ng-include='"includes/mainNav.html"'></div>
+</header>
+
+<section class="filter">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-12 col-md-9 keywords pb">
+                <h2>Filter by keyword:</h2>
+                <ul class="flat">
+                    <li ng-repeat="each in keywords.split(',')"><a href="home/{{each}}">{{each}}</a> </li>
+                </ul>
+            </div>
+            <div class="col-sm-12 col-md-3 search pb">
+                <label><h2>Search:</h2> <input ng-model="currentItem"></label>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="mainlist">
+    <div class="container-fluid">
+        <div class="row" monitor-style="height" update-variable="height">
+            <!-- barely explained https://plnkr.co/edit/?p=preview -->
+            <div
+                class="col-12 col-sm-6 col-md-4"
+                ng-repeat="each in food | filter: currentItem"
+                ng-class="{ 'even': $even, 'odd': $odd }" >
+
+                <ul class="itemList flat">
+                    <li class="header">
+                        <h3><a href="menu/{{ each.name }}" style="background-image: url('assets/{{each.imageSM}}');"><span>{{ each.name }}</span></a></h3>
+                    </li>
+                    <li class="details">
+                        <p><span class="fieldName">Phone:</span> <span class="phone">{{ each.phone }}</span></p>
+                        <p><span class="fieldName">Minimum:</span> <span class="minimum">{{ each.minimum }}</span></p>
+                        <p><span class="fieldName">Devilery Fee:</span> <span class="fee">{{ each.fee }}</span></p>
+                    </li>
+                    <li class="hoverbox hours" ng-mouseover="hoursToggle='open'" ng-mouseleave="hoursToggle=''">
+                        <span class="a">Hours</span>
+                        <div ng-app="ngAnimate">
+                            <div ng-class="hoursToggle" class="overflow {{CurrentDate | date:'EEE' | lowercase }}">
+                                <div ng-repeat="each in each.hours">
+                                    <p class="{{ each.day }}" ng-class="{ 'even': $even, 'odd': $odd }"><span class="fieldName">{{ each.day}}:</span> {{ each.dayHours }}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="site promo">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-6 col-12">
+                <div class="gutter text-center">
+                    <h3>Did you Know?</h3>
+                    <p>Lorem ipsum dolor sit amet, eos ad delectus adolescens dissentiet, meis quas eum eu. </p>
+                    <p>Eos ad delectus adolescens dissentiet, meis quas eum eu. Et minim utroque quo, eum cu tacimates sensibus philosophia.</p>
+                    <span class="cta"><a href="home">Tell Me More</a></span>
+                </div>
+            </div>
+            <div class="col-sm-6 col-12">
+                <div class="gutter text-center">
+                    <h3>Black Eyed Peas</h3>
+                    <ul class="native">
+                        <li><p>Said to bring luck when eaten on New Year's Day</p></li>
+                        <li><p>Are high in protein and fiber</p></li>
+                        <li><p>Are low in fat</p></li>
+                    </ul>
+                    <span class="cta"><a href="home">Eat It</a></span>
+               </div>
+            </div>
+            <div class="col-sm-6 col-12">
+                <div class="gutter text-center">
+                    <h3>Better CTA Options</h3>
+                    <ul class="native">
+                        <li><p>Get My... Why My...?</p></li>
+                        <li><p>Give Me More, Show Me More, Tell Me More, I Want This</p></li>
+                        <li><p>Find Out More, Explore, Discover, Get it</p></li>
+                        <li><p>The Advantages, The Benefits</p></li>
+                    </ul>
+                    <span class="cta"><a href="home">Explore CTAs</a></span>
+                </div>
+            </div>
+            <div class="col-sm-6 col-12">
+                <div class="gutter text-center">
+                    <h3>The New York</h3>
+                    <p>Eos ad delectus adolescens dissentiet, meis quas eum eu. Et minim utroque quo, eum cu tacimates sensibus philosophia.</p>
+                    <p>Eos ad delectus adolescens dissentiet, meis quas eum eu. Et minim utroque quo.</p>
+                    <span class="cta"><a href="http://www.nytimes.com/pages/dining/index.html">Explore Food</a></span>
+               </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div ng-include='"includes/footer.html"'></div>

@@ -1,0 +1,200 @@
+<div ng-repeat="each in food | filter: currentItem">
+    <header>
+
+        <!-- mainNav - - - - - - - - - - - - - -->
+
+        <ng-include src="'includes/mainNav.html'"></ng-include>
+
+
+        <!-- banner - - - - - - - - - - - - - -->
+
+        <div class="container-fluid banner" style="background-image: url('assets/{{each.imageLG}}');">
+            <div class="row">
+
+                <!-- placard name - - - - - - - - - - - - - -->
+
+                <div class="col-xs-12 col-sm-10 placard">
+                    <div class="row">
+                        <div class="col-sm-11 offset-sm-1">
+                            <h2><span>Welcome to</span> {{each.name}}</h2>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- placard info - - - - - - - - - - - - - -->
+
+                <div class="col-xs-12 col-sm-6 col-md-5 placard">
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-10 offset-sm-2 pb">
+                            <ul class="itemList flat">
+                                <li class="details">
+                                    <p><span class="fieldName">Phone:</span> <span class="phone">{{ each.phone }}</span></p>
+                                    <p><span class="fieldName">Minimum:</span> <span class="minimum">{{ each.minimum }}</span></p>
+                                    <p><span class="fieldName">Devilery Fee:</span> <span class="fee">{{ each.fee }}</span></p>
+                                </li>
+                                <li class="hoverbox hours" ng-mouseover="hoursToggle='open'" ng-mouseleave="hoursToggle=''">
+                                    <span class="a">Hours</span>
+                                    <div ng-app="ngAnimate">
+                                        <div ng-class="hoursToggle" class="overflow {{CurrentDate | date:'EEE' | lowercase }}">
+                                            <div ng-repeat="each in each.hours">
+                                                <p class="{{ each.day }}" ng-class="{ 'even': $even, 'odd': $odd }"><span class="fieldName">{{ each.day}}:</span> {{ each.dayHours }}</p>
+                                            </div>
+                                            <!--
+                                            <p class="sun"><span class="fieldName">Sun:</span> {{ each.hours.sun}}</p>
+                                            <p class="mon"><span class="fieldName">Mon:</span> {{ each.hours.mon}}</p>
+                                            <p class="tue"><span class="fieldName">Tue:</span> {{ each.hours.tue}}</p>
+                                            <p class="wed"><span class="fieldName">Wed:</span> {{ each.hours.wed}}</p>
+                                            <p class="thu"><span class="fieldName">Thu:</span> {{ each.hours.thu}}</p>
+                                            <p class="fri"><span class="fieldName">Fri:</span> {{ each.hours.fri}}</p>
+                                            <p class="sat"><span class="fieldName">Sat:</span> {{ each.hours.sat}}</p>
+                                            -->
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="hoverbox address" ng-mouseover="addressToggle='open'" ng-mouseleave="addressToggle=''">
+                                    <span class="a">Address</span>
+                                    <div ng-app="ngAnimate">
+                                        <div ng-class="addressToggle" class="overflow">
+                                            <address>{{ each.address.address1}}{{each.address.address2 }} </br>{{ each.address.city}}, NY &ndash; {{ each.address.zipcode }}</address>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="priceRange">{{ each.priceRance }}</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+</div>
+
+<section>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12">
+                <!-- h2>Welcome to <span ng-bind='currentItem'></span></h2 -->
+                <div ng-repeat="each in food | filter: currentItem">
+                    <br>
+                    <br>
+                    [MENU REPEAT PLACEHOLDER]
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    [MENU REPEAT PLACEHOLDER]
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    [MENU REPEAT PLACEHOLDER]
+                    <br>
+                    <br>
+                    <br>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="item promo">
+    <div class="container-fluid">
+        <div class="row">
+
+            <!-- item promo I - - - - - - - - - - - - - -->
+
+            <div class="col-md-3 col-6">
+                <div class="gutter text-center">
+                    <h3>20% <br>OFF</h3>
+                    <p>A baked sweet potato contains over 400% of your daily</p>
+                </div>
+            </div>
+
+            <!-- item promo II - - - - - - - - - - - - - -->
+
+            <div class="col-md-3 col-6">
+                <div class="gutter text-center">
+                    <h3>Best Sellers!</h3>
+                    <p><a href="home">Rice Noodles</a></p>
+                    <p><a href="home">lorem Ipsun</a></p>
+                    <p><a href="home">Dollor sit Amet consectetur</a></p>
+               </div>
+            </div>
+
+            <!-- item promo III - - - - - - - - - - - - - -->
+
+            <div class="col-md-3 col-6">
+                <div class="gutter text-center">
+                    <h3>Black Eyed Peas</h3>
+                    <p>In season $6.00 cup</p>
+                    <span class="cta"><a href="home">Eat It</a></span>
+                </div>
+            </div>
+
+            <!-- item promo IV - - - - - - - - - - - - - -->
+
+            <div class="col-md-3 col-6">
+                <div class="gutter text-center">
+                    <h3>Pasta Di Casa</h3>
+                    <p>Are low in fat and high in fiber</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- larger size promote
+<section class="couple">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-6 col-12">
+                <div class="gutter text-center">
+                    <h2><a href="home">Better CTA Options</a></h2>
+                    <ul class="native">
+                        <li><p>Get My... Why My...? The Advantages, The Benefits</p></li>
+                        <li><p>Give Me More, Show Me More, Tell Me More, I Want This</p></li>
+                        <li><p>Find Out More, Explore, Discover, Get it</p></li>
+                    </ul>
+                    <span class="cta"><a href="home">Explore CTAs</a></span>
+               </div>
+            </div>
+            <div class="col-md-6 col-12">
+                <div class="gutter text-center">
+                    <h2><a href="http://www.nytimes.com/pages/dining/index.html">The New York</a></h2>
+                    <p>Find food and wine news and fine dining, cuisine, New York restaurants, four-star restaurants andmore.</p>
+                    <p>Recipes, cooking, desserts food and wine news and reviews on restaurants, chefs, fine dining, cuisine.</p>
+                    <span class="cta"><a href="http://www.nytimes.com/pages/dining/index.html">Explore Food</a></span>
+               </div>
+            </div>
+        </div>
+    </div>
+</section>
+-->
+
+<section class="site promo">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-6 col-12">
+                <div class="gutter text-center">
+                    <h3>Did you Know?</h3>
+                    <p>Lorem ipsum dolor sit amet, eos ad delectus adolescens dissentiet, meis quas eum eu. </p>
+                    <p>Eos ad delectus adolescens dissentiet, meis quas eum eu. Et minim utroque quo, eum cu tacimates sensibus philosophia.</p>
+                    <span class="cta"><a href="home">Tell Me More</a></span>
+                </div>
+            </div>
+            <div class="col-sm-6 col-12">
+                <div class="gutter text-center">
+                    <h3>Black Eyed Peas</h3>
+                    <ul class="native">
+                        <li><p>Said to bring luck when eaten on New Year's Day</p></li>
+                        <li><p>Are high in protein and fiber</p></li>
+                        <li><p>Are low in fat</p></li>
+                    </ul>
+                    <span class="cta"><a href="home">Eat It</a></span>
+               </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div ng-include='"includes/footer.html"'></div>
