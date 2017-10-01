@@ -1,0 +1,106 @@
+<!-- float-sm-right -->
+<!-- div ng-repeat="each in food | filter: currentItem" -->
+
+<!-- mainNav - - - - - - - - - - - - - -->
+<header>
+    <ng-include src="'includes/mainNav.html'"></ng-include>
+</header>
+
+    <!-- banner - - - - - - - - - - - - - -->
+
+<div ng-repeat="each in food | filter: currentItem">
+    <div class="container-fluid banner">
+        <div class="row">
+
+            <!-- placard name - - - - - - - - - - - - - -->
+            <div class="col-xs col-md-10 offset-md-1 placard">
+                <h2>{{each.employer}}</h2>
+            </div>
+            <div class="col-xs col-md-10 offset-md-1 placard info">
+                <h3><a class="external" target="_blank" ng-href="{{each.url}}">{{each.name}} <span></span></a></h3>
+                <div class="row">
+                    <div class="col-xs col-lg-7 summary">
+                        <div>
+                            <h4>Summary</h4>
+                            <div ng-repeat="each in each.description" ng-bind-html="each"></div> 
+                            <ul class="native">                        
+                                <li ng-repeat="each in each.descriptionList"  ng-bind-html="each"></li>
+                            </ul> 
+                        </div>
+                    </div>
+                    <div class="col-xs col-lg-5">
+                        <div class="row">
+                            <div class="col-6 {{each.duration.applicable}}">
+                                <h4>Date</h4>
+                                <p class="duration"><strong>From:</strong> <c>{{each.duration.from}}</c> <br><strong>To:</strong> <c>{{each.duration.to}}</c></p>
+                            </div>
+                            <div class="col-6 {{each.duration.date}}">
+                                <h4>Date</h4>
+                                <p class="duration"><c>{{each.duration.date}}</c></p>
+                            </div>
+
+                            <div class="col-6 location">
+                                <h4>Location</h4>
+                                <address>{{ each.address.street}} <c>{{ each.address.cityState}}</c></address>
+                            </div>
+
+                            <div class="col-sm-12">
+                                <h4 class="border">Technologies</h4>
+                                <p class="technologies">
+                                    <span>The following total of {{each.technologies.length}} technologies were used in this project:</span>
+                                    <span ng-repeat="each in each.technologies"><a class="{{each}}" ng-href="portfolio/{{each}}">{{each}}</a> </span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs col-md-10 offset-md-1 placard screenshots {{ each.image.image }}">
+ 
+
+<!--
+    <a ng-click="triggerTitle='This works!'">test</a>
+    <h5>Please select trigger event: [{{triggerEvent}}] {{triggerTitle}}</h5>
+        <li ng-repeat="e in events">
+            <a ng-click="$parent.triggerTitle=e.name; $parent.triggerEvent = e.action;">{{e.action}} - {{e.name}}</a>
+        </li>
+-->
+
+
+                <h4>Screen Shots</h4>    
+                <span ng-repeat="each in each.image"><img ng-src="assets/-images/{{each}}"></span>
+
+                <!-- !span ng-repeat="each in each.image">
+                    <span ng-click="popupImage{{each}}='open'">
+                        <img ng-src="assets/-images/{{each}}">
+                        <div ng-app="ngAnimate">
+                            <div class="popup text-left" ng-class="popupImage{{each}}">
+                                <div class="header hidden-xs" ng-click="popupImage{{each}}=''">X</div>
+                                <img ng-src="assets/-images/{{each}}">
+                            </div>
+                        </div> 
+                    </span>
+                </span -->
+
+                <span class="large" ng-repeat="each in each.imageL"><img ng-src="assets/-images/{{each}}"></span>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<section class="promo">
+    <div class="container-fluid">
+        <div class="row first">
+            <!-- div class="col-md-10 offset-md-1" -->
+            <div class="col-12">
+                <ng-include src="'includes/promo1.html'"></ng-include>
+            </div>
+            <div class="col-12">
+                <ng-include src="'includes/promo2.html'"></ng-include>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div ng-include='"includes/footer.html"'></div>

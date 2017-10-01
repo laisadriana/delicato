@@ -1,0 +1,101 @@
+<header>
+    <div ng-include='"includes/mainNav.html"'></div>
+    <div class="banner">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-10 offset-sm-1 placard">
+                    <h2>Front-end Development</h2>
+                </div>
+                <div class="col-sm-10 offset-sm-1 placard info">
+                    <h3>Portfolio - Selected Work (2006-2017)</h3>
+                    <p>Please click any icon below to enlarge, or click any keyword to filter by technology. Any other keyword can also be searched.</p>
+                    <div class="filter">
+                        <label class="search"><h3>Search:</h3> <input ng-model="currentItem" type="text" title="Search" class="form-control" aria-label="Search" ></label>
+                        <h3>Filter by keyword:</h3>
+                        <ul class="flat keywords">
+                            <li ng-repeat="each in keywords.split(',')"><a ng-href="portfolio/{{each}}" class="{{each}}">{{each}}</a> </li>
+                        </ul>                    
+                    </div>                    
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- section class="filter container-fluid">
+    <div class="row">
+        <div class="col-sm keywords">
+            <div class="search">
+                <label><h3>Search:</h3> <input ng-model="currentItem" type="text" title="Search" class="form-control" aria-label="Search" ></label>
+            </div>
+            <h3>Filter by keyword:</h3>
+            <ul class="flat">
+                <li ng-repeat="each in keywords.split(',')"><a ng-href="portfolio/{{each}}" class="{{each}}">{{each}}</a> </li>
+            </ul>
+        </div>
+    </div>
+</section -->
+
+<section class="mainlist">
+    <div class="container-fluid">
+        <div class="row" monitor-style="height" update-variable="height">
+            <!-- barely explained https://plnkr.co/edit/?p=preview -->
+            <div
+                class="col-12 col-md-6 col-lg-4  col-xl-3"
+                ng-repeat="each in food | filter: currentItem"
+                ng-class="{ 'even': $even, 'odd': $odd }" >
+
+                <ul class="itemList flat">
+                    <li class="header">
+                        <h3>
+                            <a href="portfolio/item/{{ each.name }}">
+                                <span class="image" style="background-image: url('assets/-images/{{each.icon}}');"></span>
+                                <strong>{{ each.name }}</strong>
+                            </a>
+                        </h3>
+                    </li>
+                    <li class="details">
+                        <p><span ng-repeat="each in each.technologies"><c>{{ each }}</c>, </span> </p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="site promo">
+    <div class="container-fluid">
+        <div class="row first">
+            <div class="col-12 col-lg-12 col-xl-6">
+                <ng-include src="'includes/promo1.html'"></ng-include>
+            </div>
+            <div class="col-12 col-lg-12 col-xl-6">
+                <ng-include src="'includes/promo2.html'"></ng-include>
+            </div>
+            <div class="col-md-6 col-12 hidden-xs-down">
+                <div class="gutter text-center">
+                    <h3>Utilities Migration <c>to BS4</c></h3>
+                    <p>The .hidden and .show classes have been removed</p>
+                    <p>replaced by .hidden-xs-up .hidden-xs-down .hidden-sm-up .hidden-sm-down .hidden-md-up .hidden-md-down .hidden-lg-up .hidden-lg-down.</p>
+                    <p>The classes col-xs-* have been removed. Use col-12, col-6, col-4, and so on for xs.</p>
+                    <span class="cta"><a target="_blank" href="https://v4-alpha.getbootstrap.com/migration/">Bootstrap Migration</a></span>
+                </div>
+            </div>
+            <div class="col-md-6 col-12 hidden-xs-down">
+                <div class="gutter text-center">
+                    <h3>A Better CTA</h3>
+                    <p>No please, do not use "click here" ever again! <br>It is not just awkward to use "click here" but also let's take in consideration that portable device users do not ever click anything! They tap! And there are more people tapping than clicking nowadays. So let's get over the "click here" once and for all and try these suggestions instead:</p>
+                    <ul class="native">
+                        <li><p>Get It!, I Want This!, Get My...</p></li>
+                        <li><p>Give Me More, Show Me More, Tell Me More, Find Out More</p></li>
+                        <li><p>Explore, Discover..., Enjoy...</p></li>
+                        <li><p>See The Advantages, Explore The Benefits, Why...?</p></li>
+                    </ul>
+                    <p>And if it is an official website, it is no excuse, just use the old and good "More info" and nobody will be hurt.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div ng-include='"includes/footer.html"'></div>

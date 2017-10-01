@@ -1,0 +1,58 @@
+<footer class="container-fluid">
+        <div class="row">
+            <aside class="col-sm" role="contentinfo">
+                <div class="copyright">
+                    <span class="a hidden-sm-down" ng-click="contactPopup='open'">Contact Me</span>
+                    <span class="a hidden-sm-down" ng-click="myVar='open'">Disclaimer &amp; Credits</span>
+                    <div>Copyright &copy; 2008-2017 alexlais.com. <c>All Rights Reserved</c>.</div>
+                </div>
+                <!-- ng-animate -->
+                <div ng-app="ngAnimate">
+                    <div class="popup text-left" ng-class="myVar">
+                        <div class="header hidden-sm-down" ng-click="myVar=''">
+                            <h3>Disclaimer and Credits <span>x</span></h3>
+                        </div>
+                        <div class="credits-content" ng-class="{ active: isActive('/') }">
+                            <h4>Credits</h4>
+                            <ul class="flat">
+                                <li><p><a href="http://www.pixabay.com" target="_blank">Free stock images by&hellip;</a></p></li>
+                            </ul>
+                        </div>
+                        <div class="popup-content">
+                            <h4>Disclaimer</h4>
+                            <div>
+                                <p>The code implemented on this web site is available to the public and can be used, edited and reproduced for any purpose. <a target="_blank" href="https://github.com/alexlais/dotcom">View on GitHub</a>.</p>
+                                <p>Original template source: <a target="_blank" href="https://docs.angularjs.org/api/ngRoute/service/$route">https://docs.angularjs.org/api/ngRoute/service/$route</a>.</p>
+                                <p>Copyright 2017 Google Inc. All Rights Reserved. Use of this source code is governed by an MIT-style license that can be found in the LICENSE file at http://angular.io/license.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="popup text-left" ng-class="contactPopup">
+                        <div class="header hidden-sm-down" ng-click="contactPopup=''">
+                            <h3>About &amp; Contact <span>x</span></h3>
+                        </div>
+                        <div class="popup-content">
+                            <h4>Alex Lais</h4>
+                            <p>917-995-3195 | <a target="_blank" href="https://www.linkedin.com/in/alexlais/">LinkedIn</a> | <a href="mailto:alexlaisny@gmail.com">Email</a> | <a href="https://github.com/alexlais/dotcom/blob/master/assets/AlexLais.docx?raw=true">Resume docx</a> | <a target="_blank" href="assets/AlexLais.pdf">Resume pdf</a></p>
+
+                            <!-- h4>WHAT I’VE BEEN DOING</h4>
+                            <p>Since my last contract at WebMD expired I have been working on freelance AngularJS SPA projects and I am now searching for a new and exciting opportunity where I can use my AngularJS experience at corporate level.</p>
+                            <p>I have been working over 7 years at Agile, very fast agency environments, producing hundreds of projects yearly, been told to be the best and fastest HTML5 and CSS3 programer that PM’s love to work with: always on time and bug free projects for a happy client ahead. I’ve been working with different designers and methodologies of grids, producing the maximum consistent and pixel perfect work possible and impressing Art Directors from NBC to WebMD. I have been also re-factoring large scale websites like McKinsey.com or  BravoTV.com and I know what it takes to handle it properly, following business rules and deadlines precisely.</p>
+
+                            <h4>HIGHER LEVEL GOALS</h4>
+                            <p>Front-end Development has become extremely exciting with AngularJS and so many other powerful client-side processing technologies delivering to me all the functionality once reserved to server-side programing. Therefore, my higher level goal is to explore all it’s features for at least another decade and grow with one company for a long term.</p>
+
+                            <h4>LOWER LEVEL GOALS</h4>
+                            <p>Firstly every single client should be happy with their projects and should come back for more. Secondly I want to learn, teach and produce, being always attentive working with other developers, seeking and sharing knowledge daily, and participating in the training of new developers and overseeing their work.</p>
+
+                            <h4>WHY I AM CONFIDENT TO BE THE BEST OPTION</h4>
+                            <p>For over 7 years I have experienced many different methodologies, technologies and environments, working with countless teams locally and remotely (back-end, art, editorial, legal, business analysts), and being the most reliable Front-end developer. Therefore I am absolutely confident I will be a great developer for you as well!</p>
+                            <p>To me A GOOD DEVELOPER should do it fast, perfectly, exactly as the client wants, and always inputing concerns or suggestions when suitable. Should expose no fear to change or learn everything again every day - in fact that is what makes it exciting the most - and should be ready to implement new technologies as soon as browsers are, making sure accessibility is granted to all users.</p -->
+                        </div>
+                    </div>
+                </div> 
+                <!-- /ng-animate -->
+            </aside>
+        </div>
+</footer>

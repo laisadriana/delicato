@@ -1,0 +1,1242 @@
+@import url('https://fonts.googleapis.com/css?family=Asap:400,500,700|PT+Sans:400,700|Maven+Pro:400,500,600,700|Work+Sans:200,400,700');
+
+body, button, input, optgroup, select, textarea {
+    font-family: 'asap', Helvetica, Arial, sans-serif;
+    font-weight: 400;
+}
+.promo h3 {
+    font-family: 'Work Sans', Helvetica, Arial, sans-serif;
+    font-weight: 200;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Maven Pro', Helvetica, Arial, sans-serif;
+    font-weight: 400;
+    margin: 0 0 0.5em;
+    color: black;
+}
+
+/* _colors
+accent          00ffff 00ffff
+blue:           00bbff 00bbff 
+darker blue     00b0eb
+red:            fa0053 fa0053
+body back:              f0f5f5
+dark body back:         d1e0e0 
+*/
+
+
+/* _BOLD --------------------- */
+
+strong, .a, span.a, .priceRange {
+    font-weight: 500;
+}
+
+/* INHERIT ---------------------------------- */
+/* fix the :focus so that it wont have to be overwritten over and over evry time link styles change */
+a:focus {
+    color: inherit;
+    background: inherit;
+}
+
+/* --- _SECTIONS ---------------------------- */
+html, body {
+    height: 100%;
+}
+body {
+    background-color: #f0f5f5;
+    /*
+    font-smooth: never;
+    */
+    color: #999;
+    font-size: 1.1rem;
+    line-height: 1.4;
+}
+.notApply {
+    display: none;
+}
+.filter .row, header nav ul ul.row {
+    display: block;
+}
+
+/*-- _LINKS ---------------------------------------------------- */
+
+a, a:focus, header nav a:hover, .promo h2 a:hover, .promo h4 a:hover, .promo p a:hover, .keywords a:hover, .placard .technologies a:hover {
+    text-decoration: none;
+}
+footer a, .promo h2 a, .promo h4 a, .promo p a {
+    text-decoration: underline;
+}
+.external {
+    transition-property: background, color, opacity;
+    transition-duration: .5s;
+    transition-timing-function: easy-in;
+}
+.external span {
+    background: url('assets/-images/external-link-icon.png') center no-repeat;
+    background-size: 19px;
+    padding: 0;
+    border-radius: 6px;
+    font-size: 0;
+    line-height: 0;
+    background-color: #00b0eb;
+    display: inline-block;
+    transition-property: width, height;
+    transition-duration: .5s;
+    transition-timing-function: easy-in;
+    vertical-align: middle;
+    margin-top: -3px;
+}
+.external:hover span { 
+    padding: 15px;
+    transition-property: padding;
+    transition-duration: .5s;
+    transition-timing-function: easy-out;
+} 
+
+/*-- _COLORS ---------------------------------------------------- */
+a, .a, h1, h1 a, header nav li.navItem a:hover, .filter a:hover, header nav a:hover, main.item .itemList .priceRange, .placard .technologies a:hover, .promo .row.first > div:first-child p a {
+    color: DeepSkyBlue;
+}
+h2, h2 a, h3, h3 a {
+}
+/*
+DIF PINK         ff6699   LH - FF69B4 / DK - FF1493 / FADED - DB7093
+*/
+
+a:hover, .a:hover {
+    color: Black;
+    text-decoration: underline;
+    cursor: pointer;
+}
+.promo, .promo h3, .promo h2 a, .promo h4 a, .promo p a {
+    color: White;
+}
+
+/*-- _HEADINGS and COPY -------------------------------------------- */
+
+h2 {
+    line-height: 1;
+    font-size: 2.5em;
+}
+.placard h2 {
+    font-weight: 200;
+    font-size: 3em;
+}
+h3 {
+    line-height: 1.25;
+    font-size: 1.5em;
+}
+main.item .placard h3 { 
+    font-size: 2.3em;
+    margin: .5em 0 .75em;
+}   main.item .placard h3 a, .itemList li.header h3 a { 
+        color: DeepSkyBlue;
+        text-decoration: none;
+    }   main.item .placard h3 a:hover, .itemList li.header h3 a:hover {
+            color: #00b0eb;
+        } 
+
+.promo h3 {
+    margin-bottom: 2.5rem;
+}
+h4 {
+    line-height: 1.2;
+    font-size: 1.5em;
+}
+.placard h4 {
+    font-size: 1.5em;
+}
+p {
+    line-height: 1.35;
+    margin: 0 0 1em;
+}
+address {
+}
+ul.native {
+    padding-left: 20px;
+    list-style: url("assets/images/thumbs/plus.svg");
+}
+ul.native p, ul.native li {
+    margin-bottom: .8em;
+}
+ul.native.flat p {
+    margin-bottom: 1em;
+}
+/* for menus or links lists - current use: .filter */
+ul.flat ,ul.flat li, ul.flat p, address {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.text-center ul.native:not(.flat) {
+    text-align: left;
+    margin: 0 0 1.3em;
+}
+hr {
+    display: block;
+    margin: 1em auto;
+    border-style: inset;
+    border-width: 1px;
+    border: 1px dashed #f5f5f5;
+}
+c {
+    white-space: nowrap;
+}
+.location c {
+    display: block;
+}
+cc {
+    word-break: keep-all;
+    white-space: nowrap;
+}
+.img-responsive {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+img.icon {
+    width: 50px;
+    height: auto;
+    display: block;
+    margin: 3em auto 1em auto;
+}
+
+/* _placard and _banner --------------------- */
+
+/*              !!!! 
+    .banner is .container-fluid 
+                !!!!                */
+
+.row .placard.info {
+    background: white;
+    border-radius: 3px;
+    border-top: 3px solid #ff144f;
+    border-bottom: 3px solid #ff144f;
+    padding-top: 1.5em;
+}
+
+/* --- screenshots --- --- --- */
+.row .placard.screenshots {
+    background: DeepSkyBlue;
+    padding-top:2.5em;
+    margin-top: 5Vw;
+    border-radius: 4px;
+    border-top: 3px solid white;
+    border-bottom: 3px solid white;
+}
+.row .placard.screenshots img {
+    float: right;
+    width: 48%;
+    margin: 2% 0;
+}
+.row .placard.screenshots span:nth-child(2n+2) img {
+    float: left;
+}
+.row .placard.screenshots span.large img {
+    width: 100%;
+    height: auto;
+    margin: 0 0 2em;
+    max-width:1000px;
+}
+.row .placard.screenshots h4 {
+    color: white;
+    font-size: 1.8em;
+}
+.placard h4.border {
+    margin-top: 1em;
+    padding-top: 1.5em;
+    border-top: 4px solid #f0f5f5;
+}.placard .duration strong {
+    min-width: 30%;
+    display: inline-block;
+    padding-right: 2%;
+}
+.placard .technologies span:first-child {
+    display: block;
+    margin-left: 0;
+    padding-bottom: 0.5em;
+}
+.placard .technologies span {
+    margin-left: -.5em;
+}
+.placard .technologies, .keywords ul {
+    text-align: justify;
+}
+.placard .technologies a, .keywords a {
+    display: inline-block;
+    padding: .25em .5em;
+    border-radius: 4px;
+    line-height: 1.25;
+    white-space: nowrap;
+    line-height: 1;
+    text-transform: capitalize;
+}
+.placard .technologies a:hover, .keywords a:hover {
+    background: #ff144f;
+    color: White;
+}
+
+/* KEYWORD SIZES */
+.technologies .AngularJS {
+    font-size: 1.7em;
+}
+.technologies .Bootstrap, .technologies .Media {
+    font-size: 1.2em;
+}
+.technologies .No.jQuery, .technologies .GitHub {
+    font-size: 1.5em;
+}
+.technologies .Responsive {
+    font-size: 1.2em;
+}
+
+/* === _banner === */
+
+.banner {
+    padding-top: 5Vw;
+    padding-bottom: 10Vw;
+}
+.portfolio .banner {
+    padding-bottom: 3Vw;
+}
+
+main.portfolio .banner {
+    background-image: url('assets/-images/internet.png');
+    background-size: 80% auto;
+    background-position: center 30%;
+    background-attachment: fixed;
+    border-bottom: 3px solid #00bbff;
+}
+
+main.portfolio .placard h2 {
+    color: white;
+}
+
+/* _CTA --------------------- */
+
+.cta {
+    display: block;
+    padding: 1em 0;
+}
+.cta a {
+    background: transparent;
+    letter-spacing: 1px;
+    line-height: 1.5;
+    border-radius: 3px;
+    padding: 0.25em 20px;
+    border: 1px solid #00bbff;
+    color: #00bbff;
+    transition-property: background, margin, color, padding, border, box-shadow;
+    transition-duration: 0.5s;
+    transition-timing-function: easy-in;
+}
+.cta a:after {
+    content: "\271A";
+    content: "\2794";
+    padding-left: 5px;
+    font-size: 17px;
+    font-family: arial;
+    line-height: 1.5em;
+    vertical-align: 0px;
+    display: inline-block;
+    transition-property: text-indent;
+    transition-duration: 0.5s;
+    transition-timing-function: easy-in;
+
+}
+.cta a:hover {
+    padding-right: 10px;
+    color: white;
+    text-decoration: none;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, .25);
+    border: 1px solid #00bbff;
+    background: #00bbff;
+}
+.text-center .cta a:hover {
+}
+.cta a:hover:after {
+    text-indent: 10px;
+}
+/* --------------  _header _nav ---------------  */
+header nav.col-sm {
+    padding-top: .75em;
+    padding-bottom: .5em;
+    background: black;
+    border-bottom: 3px solid #00bbff;
+}
+header nav li.navItem {
+    text-align: left
+}
+header nav li.navItem a {
+    font-weight: 200px;
+    color: white;
+    line-height: 1;
+    font-size: 14px;
+    padding: 0 1em .25em;
+    display: inline-block;
+}
+header nav ul ul.row {
+    height: 50px;
+    overflow-x: scroll;
+    overflow-y: hidden;
+}
+header nav ul ul.row li, header nav ul ul.row li a {
+    display: inline;
+    white-space: nowrap;
+    word-break: keep-all;
+}
+header nav > ul > li:last-child {
+
+}
+
+/* === _footer === */
+
+footer {
+    background: #000;
+    font-size: 0.8em;
+    border-top: 3px solid #fa0053;
+}
+footer .copyright {
+    font-size: 0.7em;
+    font-size: 12px;
+    padding: 1em 0;
+}
+footer .copyright .a {
+    cursor: pointer;
+    text-decoration: underline;
+    color: inherit;
+    float: right;
+    margin-left: 1em;
+}
+footer .copyright .a:hover {
+    color: white;
+    text-decoration: none;
+}
+
+/* === BRAND CSS-LOGO === */
+h1.brand {
+    margin: 0;
+    line-height: 1;
+}
+.brand a {
+    color: #fff;
+    margin: 0 20px 0 0;
+    padding: 0;
+    border: 2px solid #fff;
+    border-radius: 60% / 40%;
+    font-size: 19px;
+    float: left;
+    text-align: center;
+    overflow: hidden;
+    position: relative; 
+    background: DeepSkyBlue; 
+    box-shadow: 2px 2px 2px rgba(0,0,0,0.052) inset, -1px -1px 1px rgba(255, 255, 255, .8) inset;      
+}
+    .brand a span {
+        padding: 10px 20px 12px;
+        display: inline-block;
+        font-weight: 600;
+        transition-property: padding-top;
+        transition-duration: .5s;
+        transition-timing-function: easy-in;
+        letter-spacing: 1px;
+        text-shadow: 1px 1px rgba(0,0,0,0.052);
+    }
+    .brand a:before, .brand a:after {
+        border: 55px solid transparent;
+        border-radius: 0px;
+        display: block;
+        content: "";
+        height: 0;
+        width: 130px;
+        position: absolute;
+        transition-property: border, position, left;
+        transition-duration: .5s;
+        transition-timing-function: easy-in;
+    }
+    .brand a:before {
+        border-top: 2px solid #fff;
+        border-bottom: 0;
+        top: 0;
+        left: 0;
+    }
+    .brand a:after {
+        border-bottom: 2px solid #fff;
+        border-top: 0;
+        bottom: 0;
+        left: 0;
+    }
+    .brand a:hover {
+        background: transparent;
+        color: white;
+        background: DeepSkyBlue;
+    }
+    .brand a:hover span {
+    }
+    .brand a:hover:before {
+        left: 80px;
+        border-top: 12px solid #fff;
+    }
+    .brand a:hover:after {
+        left: -90px;
+        border-bottom: 17px solid #fff;
+    }
+
+
+.placard .row > div {
+    float: left;
+}
+
+.filter {
+    padding-top: 1em;
+}
+/* - _KEYWORDS ----------------- */
+.flat.keywords {
+    margin-left: -.9em;
+    margin-left: -.9Vw;
+}
+.keywords li {
+    display: inline;
+}
+.keywords a {
+    margin-right: 1em;
+    margin: 0 .9Vw 0 0;
+}
+
+/* --- SERCH --- --- --- */
+
+.search {
+    width: 40%;
+    float: right;
+    background: DeepSkyBlue;
+    border-radius: 3px;
+    padding: .75em 1em;
+    margin: 0 0 1em 2em;
+}
+.search h3 {
+    color: white;    
+}
+.search input {
+    display: block;
+    width: 100%;
+    height: 40px;
+    padding: 0 0.5em;
+    border: 0;
+    background: white;
+    color: black;
+}
+
+/* --------------  mainList ---------------  */
+main.portfolio .mainlist {
+    margin: 2em 15px 1.75em;
+}
+.details p {
+font-size: .9em;
+}
+.itemList li.header h3 {
+    margin: 0 0 0.125em 0;
+}
+.itemList li.header h3 a {
+}
+.itemList li.header h3 a span {
+    min-height: 200px;
+    min-height: 14em;
+    line-height: 1;
+    font-size: 0.8em;
+    display: block;
+    background-size: 220%;
+    background-position: left top;
+    position: relative;
+    overflow: visible;
+    padding: 0;
+    margin: 0 -15px;
+    transition-property: background-size;
+    transition-duration: 5s;
+    transition-timing-function: easy-in;    
+    border: 3px solid #fa0053; 
+    border-radius: 6px;
+}
+.itemList li.header h3 a:hover span {
+    background-size: 100%;
+    transition-property: background;
+    transition-duration: .5s;
+    transition-timing-function: easy-in;
+}
+.itemList li.header h3 a strong {
+    display: block;
+    padding: .25em 0;
+}
+main.portfolio .itemList.flat {
+    padding: 0 15px .5em;
+    overflow: auto;
+    background: white;
+    border-radius: 3px 3px 0 0;
+}
+
+/* --------------  _promo ---------------  */
+.promo {
+    color: rgba(255,255,255,0.95);
+}
+.promo .gutter {
+    padding-top: 3em;
+    padding-bottom: 3em;
+} 
+.promo .col-lg-6 .gutter > p {
+    padding-left: 20%;
+    padding-right: 20%;
+} 
+.promo .row.first > div {
+    /* PROMO BORDER */
+    border: 15px solid #f0f5f5;
+}
+
+/* Home Site Promo */
+main.portfolio .promo {
+    padding-top: 5Vw;
+    padding-bottom: 5Vw;
+}
+main.portfolio .promo .row.first > div {
+    border-radius: 80px 0 80px 0;
+}
+main.portfolio .promo .row.first > div:nth-child(1), main.portfolio .promo .row.first > div:nth-child(4) {
+    border-radius: 0 80px 0 80px;
+}
+
+    .promo .row.first > div:first-child h3, main.portfolio .promo .row.first > div:last-child h3 {
+        font-size: 3em;
+        color: #00bbff;
+    }
+
+/* Item Promo 
+.promo.item {
+    margin-top: 3em;
+}
+.promo.item .row > div {
+    border-radius: 0 50px 0 50px;
+}
+.promo.item .row > div:nth-child(2), .promo.item .row > div:nth-child(4) {
+    border-radius: 50px 0 50px 0;
+}
+
+
+/* Promo Colors */
+.promo .row.first > div:first-child, .promo .row.first > div:nth-child(4) {
+    background: white;
+`}
+.promo .row.first > div:nth-child(2), .promo .row.first > div:nth-child(3) {
+    background-color: #00b0eb;
+}
+.promo .row.first > div:nth-child(2) .cta a, .promo .row.first > div:nth-child(3) .cta a {
+    border: 1px solid rgba(255, 255, 255, 1);
+    color: white;
+}
+.promo .row.first > div:nth-child(2) .cta a:hover, .promo .row.first > div:nth-child(3) .cta a:hover {
+    border: 1px solid White;
+    color: white;
+    box-shadow: 0 0 20px 0 rgba(255, 255, 255, 1);
+}
+
+/* .promo text color inversion for darker background */
+.promo .row.first > div:first-child, .promo .row.first > div:first-child p,
+.promo .row.first > div:nth-child(4), .promo .row.first > div:nth-child(4) p, .promo .row.first > div:nth-child(4) h3, .promo .row.first > div:nth-child(4) .cta a, .promo .row.first > div:nth-child(4) a
+{
+    color: #777;
+}
+
+
+/* Site Promo  (keyword ***) */
+main.item .promo .row.first > div {
+    border-radius: 3px;
+    border: 0;
+}
+main.item .promo .row.first > div:first-child {
+    border-top: 3px solid #fa0053;
+    border-bottom: 3px solid #fa0053;
+}
+main.item .promo .row.first > div:last-child {
+    border-top: 3px solid white;
+    border-bottom: 3px solid white;
+}
+
+/* ROUTE INFO */
+ul.promoBox {
+    padding: 0 0 .75em;
+    border-radius: 3px;
+    display: inline-block;
+    margin: 2em auto 1em;
+    border: 1px solid white;
+}
+ul.promoBox ul, ul.promoBox li {
+    text-align: center;
+}
+ul.promoBox > li {
+    padding: .5em 1em 0;
+    display: block;
+}
+ul.promoBox span {
+    color: #333;
+    padding-left: .5em;
+    font-family: monospace;
+}
+ul.promoBox.host {
+    background: transparent;
+    border: 0;
+    max-width: 85%;
+}
+ul.promoBox .promoBox-header {
+    padding: .25em 1em;
+    border-radius: 4px 4px 0 0;
+    text-align: center;
+    display: block;
+    background: white;
+    color: #00b0eb;
+    border: 1px solid white;
+}
+ul.promoBox.host .promoBox-header {
+}
+
+form {
+}
+.btn-primary {
+    font-size: 16px;
+    padding: 5px 30px;
+    border-radius: 3px;
+    color: #444;
+    background: white;
+    border: 1px solid #999;
+    margin-top: 20px;
+    font-weight: 300;
+}
+.btn-primary:hover {
+    background: #009999;
+    border: 1px solid #009999;
+}
+textarea.form-control, .form-control {
+    border-radius: 3px;
+    border-color: #999;
+}
+.form-control:focus {
+    border-color: #009999;
+}
+.form-control {
+    height: 40px;
+}
+.form-group label {
+    font-weight: 300;
+    font-size: 0.8em;
+}
+
+
+/* --- DONE ------ DONE ------ DONE -------- DONE ------- DONE -------- DONE -------*/
+
+
+
+
+                                        /* Up to _MEDIUM  */
+                                        @media only screen and (max-width : 992px) {
+                                            .promo h3 {
+                                                font-size: 2em;
+                                                margin-left: 10%;
+                                                margin-right: 10%;
+                                            }
+                                            .promo .row.first > div:first-child h3, main.portfolio .promo .row.first > div:first-child h3, .promo .row.first > div:last-child h3.promo .row.first > div:last-child h3 {
+                                                font-size: 2.5em;    
+                                                color: #00bbff;
+                                            }
+                                           
+                                            .placard .summary {
+                                                padding-right: 0;
+                                            }
+                                            .placard .summary ul:last-child {
+                                                margin-bottom: 2em;
+                                                padding-bottom: 1.5em;
+                                                border-bottom: 3px solid #eee;
+                                            }
+                                            .promo .promoBox > span {
+                                                text-align: left;
+                                            }
+                                            .promo .promoBox span span {
+                                                display: block;
+                                                text-align: right;
+                                            }
+                                        }
+
+
+
+
+  /* === _MOBILE and TABLETS ====== SMALL =====================_MOBILE and TABLETS ====== SMALL======================================= */
+                                        @media only screen and (max-width : 767px) {
+
+                                            h3 {
+                                                font-size: 1.4em;
+                                            }
+                                            .row {
+                                                margin-top: 0;
+                                                margin-bottom: 0;
+                                            }
+                                            .row > div[class*='col-'], ng-include > div[class*='col-'] {
+                                                padding-top: 1rem;
+                                                padding-bottom: 1rem;
+                                            }
+                                            .row .row > div {
+                                                padding-top: 0;
+                                                padding-bottom: 0;
+                                            }
+                                            /* --- CANCEL padding --- */
+                                            .clearfix {
+                                                padding: 0 !important;
+                                                margin: 0 !important;
+                                            }
+
+                                            main.portfolio .mainlist {
+                                                margin-left: 0;
+                                                margin-right: 0;
+                                            }
+
+                                            .search {
+                                                float: none;
+                                                overflow: auto;
+                                                width: auto;
+                                                margin-left: 0;
+                                                display: block;
+                                            }
+
+                                            .itemList li.header h3 a span {
+                                                background-size: 100%
+                                            }
+
+                                            .row .placard.screenshots {
+                                                margin-top: 0;
+                                            }
+                                            .promo .col-lg-6 .gutter > p {
+                                                padding-left: 5%;
+                                                padding-right: 5%;
+                                            } 
+
+
+                                            footer h3, footer h4, footer a:hover {
+                                                color: #fff;
+                                            }
+                                            footer .d-flex {
+                                                display: block !important;
+                                                text-align: center;
+                                                border-top: 1px solid #ccc;
+                                            }
+                                            footer .hidden-mobile {
+                                                display: none;
+                                            }
+                                            /*
+                                            footer, footer a, footer a:hover, footer p, footer div {
+                                                color: #fff;
+                                            }
+                                            */
+                                            .popup .popup-content, .popup .credits-content {
+                                                padding-top: 1em;
+                                                margin-top: 1em;
+                                                border-top: 1px solid #777;
+                                            }
+                                            .promo .row.first {
+                                                padding-right: 10px;
+                                                padding-left: 10px;
+                                            }
+                                            .promo .row.first > div {
+                                                border-width: 5px;
+                                                border-radius: 0;
+                                            }
+                                            .promo.item .row > div:nth-child(2), .promo.item .row > div:nth-child(3) {
+                                                border-radius: 80px 0 80px 0;
+                                            }
+                                            .promo.item .row > div:nth-child(4) {
+                                                border-radius: 0 80px 0 80px;
+                                            }
+                                        }
+
+
+                                        /* === col-xs-6 braking point ======================================== */
+                                        @media only screen and (max-width : 575px) {
+                                            
+                                            nav > ul > li {
+                                                clear: left;
+                                            }
+                                            .gutter {
+                                                padding: 2em 0 !important;
+                                            }
+                                            nav li a {
+                                                word-spacing: 2px;
+                                            }
+
+                                            /* _placard and _banner --------------------- */
+                                            .banner .row .placard {
+                                                padding-top: .5rem;
+                                                padding-bottom: .5rem;
+                                            }
+                                            .banner > .row .placard:first-child {
+                                                background: rgba(255, 255, 255, 0.5);
+                                                border-radius: 3px;
+                                            }
+                                             .placard .col-xs-6 {
+                                                width: 50%;
+                                            }
+                                            
+                                            /* --- FONT SIZE --- */
+                                            .placard h2 {
+                                                font-size: 2em;
+                                            }
+                                            main.item .placard h3 {
+                                                font-size: 1.1em;
+                                            }
+                                            .external span {
+                                                background-size: 10px;
+                                            }
+                                            .external:hover span {
+                                                padding: 8px 9px;
+                                            }
+
+
+                                            h1.brand a {
+                                                margin-bottom: .5em;
+                                                margin-left: -3px;
+                                            }
+
+                                            /* Promo */
+                                            .promo .row.first {
+                                                padding: 0;
+                                            }
+                                            .promo .promoBox.host {
+                                                max-width: none;
+                                                max-width: auto;
+                                            }
+                                            .promo ul {
+                                                text-align: left;
+                                            }
+                                            /* Home Site Promo */
+                                            main.portfolio .promo.site .row > div {
+                                                border-radius: 0 100px 0 100px;
+                                            }
+                                            main.portfolio .promo.site .row > div:nth-child(2), main.portfolio .promo.site .row > div:nth-child(4) {
+                                                border-radius: 100px 0 100px 0;
+                                            }
+                                            main.item .promo.site .row > div:nth-child(3), main.item .promo.site .row > div:nth-child(4) {
+                                                display: none;
+                                            }
+                                        }
+
+
+
+
+
+
+
+
+                                        /* === MOBILE ONLY ============ XSMALL ================ */
+                                        @media only screen and (max-width : 480px) {
+                                         }
+
+                                        /* === Retina ========================================= */
+                                        @media only screen and (max-width : 320px) {
+                                            body {
+                                                font-size: 0.86em;
+                                            }
+                                            c, cc {
+                                                word-brake: normal;
+                                            }
+                                            .row {
+                                            }
+                                            header nav li.navItem {
+                                                margin-top: 0.5em;
+                                            }
+                                            h1.brand a {
+                                                margin-bottom: 0.75em;
+                                            }
+                                            .text-center {
+                                                text-align: left;
+                                            }
+                                            /* row block */
+                                            .promo .row.first {
+                                                display: block;
+                                            }
+                                            div[class*='col-'] {
+                                                max-width: auto;
+                                                max-width: none;
+                                                float: none;
+                                            }
+                                            .cta a, .cta a:hover, .cta a:after, .cta a:hover:after, ul.promoBox {
+                                                font-size: 0.8em;
+                                            }
+                                            .promo .cta a, .promo .cta a:hover {
+                                                padding: 0.25em 0.5em;
+                                                margin: 0;
+                                                text-indent: 0;
+                                            }
+                                            .promo .row.first > div:first-child .cta a, .promo .row.first > div:nth-child(4) .cta a,
+                                            .promo .row.first > div:first-child .cta a:hover, .promo .row.first > div:nth-child(4) .cta a:hover {
+                                            }
+                                            ul.promoBox {
+                                            }
+                                        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ========== _MEDIUM or larger = ALL Desktops ============= */
+@media only screen and (min-width: 769px) {
+
+    /* === _STRUCTURE PADDING ==== 1 ===================================== */
+
+    /*
+    BOOTSTRAP GRID MEASURES
+    Extra small <576px | Max container width: none (auto) | class: .col-
+    Small ≥576px | Max container width: 540px | class: .col-sm-*
+    Medium ≥768px | Max container width: 720px | class: .col-md-*
+    Large ≥992px | Max container width: 960px | class: .col-lg-*
+    Extra large ≥1200px | Max container width: 1140px | class: .col-xl-*
+    */
+
+
+    /* --- VERTICAL ------------------------------------- VERTICAL ---- */
+
+    /* --- VERTICAL GUTTER --------------------- COLUMN --- */
+
+    .row > div[class*='col-'], .row > ng-include > div[class*='col-'], .row > nav[class*='col-'] {
+        padding-top: 1em;
+        padding-bottom: 1em;
+    }
+
+    .row .row > div, .row .row > ng-include > div, div[class*='col-'].no-gutter {
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+    /*
+    div[class*='col-'] p:last-child {
+        margin-bottom: 0.5em
+    }
+    */
+    /* --- OVERWRITES ------------------------------------------------- */
+
+    /* -- cancel just half the padding --- [col-no-padding] --- */
+
+    .row > div.col-no-padding, .no-padding .row div {
+        padding-bottom: 0;
+    }   .no-padding .row div {
+            padding-top: 0;
+        }
+
+    /* -- CANCEL ALL the padding and margin, fix side effects */
+    .clearfix {
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+
+    /* === _STRUCTURE PADDING ==== 2 ===================================== */
+
+    /* --- HORIZONTAL ----------------------------------- HORIZONTAL ---- */
+
+    /* --- HORIZONTAL GUTTER - ALL COLUMNS! --- */
+    div[class*='col-'], nav[class*='col-'], aside[class*='col-'] {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+    main.portfolio .promo {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    /* --- OVERWRITES FOR HORIZONTAL GUTTER --- */
+    main.portfolio .mainlist div[class*='col-'],
+    div[class*='col-'] div[class*='col-']  {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    /* === /STRUCTURE PADDING ==== */
+
+
+    
+    body {
+        padding-top: 85px;
+    }
+    header nav.col-sm {
+        position: fixed;
+        top: 0;
+        z-index: 5;
+    }
+    .itemList li.header h3 a span {
+        min-height: 10em;
+    }
+    /* -----  mainList ------------ MEDIUM or larger ---  */
+    .promo h3 {
+        font-size: 2.4em;
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+
+    .itemList {
+        padding: 0 10px;
+    }
+    section.menu.couple {
+        margin-bottom: 3em;
+    }
+
+    /* --- UL or DIV is being used --- --- */
+    .half-width {
+        -webkit-column-count: 2;
+        -moz-column-count: 2;
+        column-count: 2;
+        column-gap: 0;
+    }
+    ul.third-width {
+        -webkit-column-count: 3;
+        -moz-column-count: 3;
+        column-count: 3;
+    }
+
+    /* _popup --------------------- MEDIUM or larger --- */
+    .popup {
+        display: none;
+        position: fixed;
+        top: 20%;
+        left: 10%;
+        /*
+        transform: translate(-50%, -50%);
+        */
+        margin: 0;
+        width: 80%;
+        max-height: 80%;
+        margin: auto;
+        background: #fafafa;
+        box-shadow:  0 0 0 2000px rgba(0,0,0,0.4);
+        border-radius: 4px 4px 3px 3px;
+        border: 1px solid white;
+    }
+    .popup .header {
+        background: #00bbff;
+        background: Black;
+        padding: 1em 2%;
+        cursor: pointer;
+        border-radius: 3px 3px 0 0;
+        }
+        .popup h3 {
+            margin: 0;
+            font-size: 18px;
+            font-weight: 400;
+            color: white;
+            text-transform: uppercase;
+        }
+        .popup h3 span {
+            float: right;
+            cursor: pointer;
+            font-size: 1.3em;
+            margin-top: -0.3em;
+            text-transform: none;
+        }
+    .popup-content {
+        overflow: auto;
+        background: #fff;
+        padding: 15px 2%;
+        border-radius: 0 0 0 3px;
+    }
+    .credits-content {
+        float: right;
+        width: 230px;
+        padding: 15px 2%;
+    }
+    .popup p {
+    }
+    .popup.open {
+        display: block;
+    }
+    footer .popup, footer .popup p, footer .popup h4, footer .popup a {
+    }
+    footer .popup a:hover {
+        color: #000;
+    }
+}
+
+        /* MEDIUM to LARGE */
+        @media only screen and (min-width: 769px) and (max-width : 1199px) {
+            .keywpords a {
+                font-size: 0.9em;
+                line-height: 0.75;
+            }
+        }
+
+        /* _MEDIUM only  */
+        @media only screen and (min-width: 769px) and (max-width : 992px) {
+            .promo ul {
+                text-align: left;
+            }
+            h3 {
+                font-size: 1.4em;
+            }
+        }
+
+        /* === LAST _LARGE or larger =================================== */
+        @media only screen and (min-width : 993px) {
+            body {
+            }
+            .itemList li.header h3 a {
+                min-height: 200px;
+            }
+            .placard .summary > div {
+                padding-right: 30px;
+            }
+
+        }
+
+        /* === _LAST X-LARGE or larger =================================== */
+        @media only screen and (min-width : 1201px) {
+            .itemList li.header h3 a {
+                min-height: 230px;
+            }
+            /*
+            main.portfolio .promo.site .row > div:nth-child(1), main.portfolio .promo.site .row > div:nth-child(3) {
+                border-radius: 0 80px 0 80px;
+            }
+            main.portfolio .promo.site .row > div:nth-child(4) {
+                border-radius: 80px 0 80px 0;
+            }
+            */
+        }
+
+
+
+
+/*
+
+
+element {
+
+}
+popup wrapper {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    overflow-y: scroll;
+}
+popup {
+    position: fixed;
+    z-index: 1;
+}
+*/
+

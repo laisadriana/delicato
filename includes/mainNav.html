@@ -1,0 +1,17 @@
+<div class="container-fluid">
+	<div class="row">
+		<nav class="col-sm">
+			<ul class="flat">
+				<li>
+					<h1 class="brand"><a href="/"><span>{{siteInfo.name}}</span></a></h1>
+				</li>
+				<li>
+					<ul class="row flat">
+						<li class="col-auto navItem" ng-repeat="each in food"><a ng-href="portfolio/item/{{ each.name }}">{{ each.name }}</a></li>
+					</ul>
+					<!-- justify-content-between -->
+				</li>
+			</ul>
+		</nav>
+	</div>
+</div>
