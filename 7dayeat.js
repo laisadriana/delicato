@@ -30,9 +30,9 @@
             }
         };
 
-        // 7DayEat.com CONTENT
+        // Delicato.ca CONTENT
         $scope.siteInfo = {
-            name: '7DayEat.com'
+            name: 'Delicato.ca'
         };
 
         // $scope.names = ["Emil", "Tobias", "Linus"];
